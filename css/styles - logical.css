@@ -1,0 +1,178 @@
+@font-face {
+    font-family: charter;
+    src: url(/fonts/charter-regular.otf);
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: charter;
+    src: url(/fonts/charter-italic.otf);
+    font-style: italic;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: charter;
+    src: url(/fonts/charter-bold.otf);
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: charter;
+    src: url(/fonts/charter-bold-italic.otf);
+    font-style: italic;
+    font-weight: bold;
+}
+
+:root {
+    font-size: 18px;
+    --luci30: #ea12b0;
+    --luci10: #1f121b;
+    --luci20: #151414;
+}
+
+html {
+    font-size: 15px;
+}
+
+body {
+    color: var(--luc10);
+    font-family: "Nuxeo", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: antiquewhite;
+}
+
+.a {
+    color: var(--luci30);
+}
+
+
+/*.header {
+    font-size: 14px;
+    color: var(--luci10);
+}*/
+
+.header-content {
+    padding-inline: 10px;
+}
+
+.header {
+    position: static;
+    inset-block-start: 25px;
+    margin-top: 40px;
+}
+
+header {
+    position: absolute;
+    font-size: 14px;
+    color: var(--luci20);
+    inset-inline-start: 20px;
+}
+
+.header li {
+    margin-block-end: 16px;
+    color: var(--luci20);
+}
+
+.header a {
+    color: var(--luci20);
+    text-decoration: none;
+}
+
+.header a:hover {
+    color: var(--luci30);
+}
+
+nav details summary {
+    font-weight: bold;
+}
+
+h1 {
+    color: var(--luci20);
+}
+
+h2 {
+    font-size: 35px;
+    margin-block: 40px;
+    color: var(--luci20);
+    text-align: center;
+}
+
+p {
+    color: var(--luci20);
+}
+
+#logo {
+    width: 85px;
+    height: 85px;
+    position: absolute;
+    margin-block-start: 10px;
+    margin-block-end: 10px;
+    inset-inline-start: 20px;
+    border-radius: 50%;
+}
+
+.hero {
+    background: #ff2a60;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 40px;
+    text-align: center;
+    margin-top: 20px !important;
+    color: #ffffff;
+}
+
+.section-content img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15%;
+    margin: 10px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+}
+
+.section-content img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.section-content {
+    display: block;
+    counter-reset: none;
+}
+
+.wrapper {
+    margin: auto;
+    max-inline-size: 902px;
+}
+
+.main-content {
+    margin-top: 20px;
+    padding-inline: 20px;
+    background-color: antiquewhite;
+}
+
+.main-content h1 {
+    text-align: center;
+    font-size: 35px;
+}
+
+.tiktok-embed {
+    margin: auto;
+    margin-block: 20px;
+    border-radius: 15px;
+}
+
+blockquote {
+    border-inline-start: 4px solid var(--luci30);
+    padding-inline-start: 10px;
+    color: var(--luci20);
+    margin-block: 20px;
+    font-style: italic;
+}
