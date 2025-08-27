@@ -168,11 +168,3 @@ p {
     margin-block: 20px;
     border-radius: 15px;
 }
-
-blockquote {
-    border-inline-start: 4px solid var(--luci30);
-    padding-inline-start: 10px;
-    color: var(--luci20);
-    margin-block: 20px;
-    font-style: italic;
-}
