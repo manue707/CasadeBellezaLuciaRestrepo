@@ -28,7 +28,7 @@
 
 :root {
     font-size: 18px;
-    --luci30: #ea12b0;
+    --luci30: #ff2a60;
     --luci10: #1f121b;
     --luci20: #151414;
 }
@@ -47,36 +47,32 @@ body {
     color: var(--luci30);
 }
 
-
-/*.header {
-    font-size: 14px;
-    color: var(--luci10);
-}*/
-
-.header-content {
-    padding-inline: 10px;
+.header {
+    position: relative;
+    inset-block-start: 0px;
 }
 
-.header {
-    position: static;
-    inset-block-start: 25px;
-    margin-top: 40px;
+.header-content {
+    position: absolute;
+    inset-block-start: 20px;
 }
 
 header {
-    position: absolute;
-    font-size: 14px;
+    font-size: 15px;
     color: var(--luci20);
-    inset-inline-start: 20px;
+    position: absolute;
+    inset-inline-start: -208px;
+    inset-block-start: 0;
+    inline-size: 188px;
 }
 
 .header li {
-    margin-block-end: 16px;
-    color: var(--luci20);
+    margin-block-end: 10px;
+    color: var(--luci10);
 }
 
 .header a {
-    color: var(--luci20);
+    color: var(--luci10);
     text-decoration: none;
 }
 
@@ -90,6 +86,7 @@ nav details summary {
 
 h1 {
     color: var(--luci20);
+    text-align: center;
 }
 
 h2 {
@@ -103,48 +100,53 @@ p {
     color: var(--luci20);
 }
 
-#logo {
-    width: 85px;
-    height: 85px;
-    position: absolute;
-    margin-block-start: 10px;
-    margin-block-end: 10px;
-    inset-inline-start: 20px;
-    border-radius: 50%;
-}
-
-.hero {
+.titulo {
     background: #ff2a60;
     display: flex;
-    flex-direction: column;
-    text-align: center;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
 }
 
-.hero h1 {
+#logo {
+    position: absolute;
+    padding: 15px 15px 15px 15px;
+    width: 80px;
+    height: 80px;
+    z-index: 1000;
+}
+
+.titulo h1 {
+    color: antiquewhite;
     font-size: 40px;
-    text-align: center;
-    margin-top: 20px !important;
-    color: #ffffff;
 }
 
-.section-content img {
-    width: 200px;
-    height: 200px;
+.galeria {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.galeria img {
+    width: 270px;
+    height: auto;
+    border-radius: 10%;
     object-fit: cover;
-    border-radius: 15%;
-    margin: 10px;
-    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
-    display: inline-block;
 }
 
-.section-content img:hover {
+.galeria img:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease;
 }
 
-.section-content {
+.section-conten img {
+    margin-block-start: 40px;
+    max-inline-size: 100%;
+}
+
+.section-conten {
+    counter-reset: titlelist;
     display: block;
-    counter-reset: none;
 }
 
 .wrapper {
@@ -153,18 +155,79 @@ p {
 }
 
 .main-content {
-    margin-top: 20px;
-    padding-inline: 20px;
-    background-color: antiquewhite;
+    padding-inline: 16px;
 }
 
 .main-content h1 {
     text-align: center;
     font-size: 35px;
+    color: var(--luci10);
+}
+
+.main-content h2 {
+    font-size: 28px;
+    margin-block: 30px;
+    color: var(--luci10);
+}
+
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+}
+
+.video-item {
+    flex: 1 1 200px;
+    min-height: 230px;
+    max-width: 320px;
 }
 
 .tiktok-embed {
-    margin: auto;
-    margin-block: 20px;
-    border-radius: 15px;
+    margin: 0;
+    padding: 0;
+    display: block;
+    text-align: left !important;
+    width: 100%;
+}
+
+@media screen and (max-width: 1280px) {
+    .titulo {
+        justify-content: center;
+        text-align: center;
+        padding: 10px;
+    }
+    #logo {
+        width: 40px;
+        height: 40px;
+        top: 25px;
+        left: 1px;
+        position: absolute;
+    }
+    .titulo h1 {
+        font-size: 28px;
+    }
+    .header {
+        position: sticky;
+        inset-block-start: -45px;
+    }
+    .header-content {
+        position: relative;
+        inset-block-start: 65px;
+        padding-inline: 0;
+    }
+    header {
+        position: absolute;
+        inset-block-start: 0;
+        inset-inline-start: -208px;
+        inline-size: 188px;
+    }
+    .galeria {
+        flex-direction: unset;
+        align-items: center;
+    }
+    .galeria img {
+        width: 50%;
+        height: auto;
+    }
 }
